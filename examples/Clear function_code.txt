@@ -1,0 +1,1 @@
+: clear DEPTH 1 + 0 DO DROP LOOP ;

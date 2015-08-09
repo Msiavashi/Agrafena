@@ -1,0 +1,6 @@
+
+: fib 0 DO DEPTH 2 - ROLL DEPTH 2 - ROLL + DUP . LOOP ;
+
+1 1 ( how many number user want to print ) fib
+
+1 1 10 fib

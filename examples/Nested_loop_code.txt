@@ -1,0 +1,2 @@
+: 0 3 0 DO 3 0 DO 1 + LOOP LOOP .;
+: 0 3 0 DO 4 0 DO 2 0 DO 1 + LOOP LOOP LOOP .;

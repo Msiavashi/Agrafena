@@ -1,0 +1,13 @@
+: clear DEPTH 1 + 0 DO DROP LOOP ;
+: cmp_le_top DEPTH 1 - ROLL DEPTH 3 - ROLL <= ;
+: mid_top DEPTH 2 - ROLL DEPTH 2 - ROLL + 2 / ;
+: get_mid DUP 0 + ROLL ;
+: item_eq DUP DEPTH 6 - ROLL .s = ;
+: item_gt DUP DEPTH 6 - ROLL < ;
+
+
+: binary_search cmp_le_top IF ."Not Found" .s ELSE mid_top get_mid item_eq IF ."EQ" .s ELSE item_gt IF ."GT" DROP DEPTH 3 - PICK DROP DEPTH 2 - PICK binary_search ELSE ."LT" DROP DEPTH 2 - PICK DROP binary_search THEN THEN THEN ;
+
+([Sorted List][Item][0][Len(SortedList)])
+10 11 12 13 14 15 11 0 6
+binary_search

@@ -1,0 +1,3 @@
+: seq DUP IF 1 - DUP . seq ELSE 0 DROP THEN ;
+
+10 seq
